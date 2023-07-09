@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+</head>
+<body style="background-color:#99627A;">
+<h3> REGISTER </h3>
+<form action="{% url 'schoolapp:register' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="user_name" placeholder="username"><br><br>
+    <input type="password" name="Pass" placeholder="Enter your password"><br><br>
+    <input type="password" name="con_pass" placeholder="Confirm your password"><br><br>
+    <input type="submit">
+</form>
+</body>
+</html>
